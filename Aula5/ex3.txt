@@ -12,7 +12,7 @@
 -- π farmaco.nome,farmaco.formula (σ presc_farmaco.numPresc= null (σ farmaco.numRegFarm=906 (farmaco) ⟕ nome=nomeFarmaco presc_farmaco))
 
 -- e) Para cada farmácia, o número de fármacos de cada farmacêutica vendidos;
--- π num, farmacia, numRegFarm (γ farmacia, numRegFarm; count(prescricao.numPresc) -> farmacos_vendidos_num (σ farmacia!=null (π prescricao.numPresc, farmacia (prescricao)) ⨝ prescricao.numPresc=presc_farmaco.numPresc (presc_farmaco)))
+-- π farmacia, numRegFarm, farmacos_vendidos_num (γ farmacia, numRegFarm; count(prescricao.numPresc) -> farmacos_vendidos_num (σ farmacia!=null (π prescricao.numPresc, farmacia (prescricao)) ⨝ prescricao.numPresc=presc_farmaco.numPresc (presc_farmaco)))
 
 -- f) Pacientes que tiveram prescrições de médicos diferentes.
--- π numUtente (σ num>1 (π num, numUtente (γ numUtente; count(numUtente) -> num_medico_dif (π num, numUtente, numMedico (γ numUtente, numMedico; count(numUtente) -> num prescricao)))))
+-- π numUtente (σ num_medico_dif>1 (π numUtente, num_medico_dif (γ numUtente; count(numUtente) -> num_medico_dif (π numUtente, numMedico, temp (γ numUtente, numMedico; count(numUtente) -> temp prescricao)))))
