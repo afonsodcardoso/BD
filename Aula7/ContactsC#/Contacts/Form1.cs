@@ -23,16 +23,16 @@ namespace Contacts
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cn = getSGBDConnection();
+            loadCustomersToolStripMenuItem_Click(sender, e);
         }
 
 
-        private SqlConnection getSGBDConnection() 
+        private SqlConnection getSGBDConnection()
         {
-            return new SqlConnection("data source= CCWIN8\\SQL2012EXPRESS;integrated security=true;initial catalog=Northwind");
+            return new SqlConnection("data source= PC-AFONSO\\SQLEXPRESS;integrated security=true;initial catalog=Northwind");
         }
 
-        private bool verifySGBDConnection() 
+        private bool verifySGBDConnection()
         {
             if (cn == null)
                 cn = getSGBDConnection();
@@ -73,6 +73,8 @@ namespace Contacts
                 C.State = reader["Region"].ToString();
                 C.ZIP = reader["PostalCode"].ToString();
                 C.Country = reader["Country"].ToString();
+                C.FAX = reader["Fax"].ToString();
+                C.tel = reader["Phone"].ToString();
                 listBox1.Items.Add(C);
             }
 
@@ -99,6 +101,8 @@ namespace Contacts
             cmd.Parameters.AddWithValue("@Region", C.State);
             cmd.Parameters.AddWithValue("@PostalCode", C.ZIP);
             cmd.Parameters.AddWithValue("@Country", C.ZIP);
+            cmd.Parameters.AddWithValue("@Phone", C.tel);
+            cmd.Parameters.AddWithValue("@Fax", C.FAX);
             cmd.Connection = cn;
 
             try
@@ -134,6 +138,8 @@ namespace Contacts
             cmd.Parameters.AddWithValue("@Region", C.State);
             cmd.Parameters.AddWithValue("@PostalCode", C.ZIP);
             cmd.Parameters.AddWithValue("@Country", C.Country);
+            cmd.Parameters.AddWithValue("@Phone", C.tel);
+            cmd.Parameters.AddWithValue("@Fax", C.FAX);
             cmd.Connection = cn;
 
             try
@@ -329,7 +335,7 @@ namespace Contacts
         private void bttnEdit_Click(object sender, EventArgs e)
         {
             currentContact = listBox1.SelectedIndex;
-            if (currentContact <= 0)
+            if (currentContact < 0)
             {
                 MessageBox.Show("Please select a contact to edit");
                 return;

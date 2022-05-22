@@ -1,0 +1,11 @@
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\bin\Debug\Contacts.exe.config
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\bin\Debug\Contacts.exe
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\bin\Debug\Contacts.pdb
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\obj\x86\Debug\Contacts.csproj.AssemblyReference.cache
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\obj\x86\Debug\Contacts.csproj.SuggestedBindingRedirects.cache
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\obj\x86\Debug\Contacts.Form1.resources
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\obj\x86\Debug\Contacts.Properties.Resources.resources
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\obj\x86\Debug\Contacts.csproj.GenerateResource.cache
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\obj\x86\Debug\Contacts.csproj.CoreCompileInputs.cache
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\obj\x86\Debug\Contacts.exe
+C:\Users\Afonso\Desktop\BD\Aula7\ContactsC#\Contacts\obj\x86\Debug\Contacts.pdb
